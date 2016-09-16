@@ -67,6 +67,14 @@ textarea {
   right: 25px;
 }
 
+#git_btn {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
 #source_btn {
   display: block;
   position: fixed;
