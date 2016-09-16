@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Slabo";
+    src: url(Slabo_27px/Slabo27px-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Source";
+    src: url(Source_Code_Pro/SourceCodePro-Semibold.ttf) format("truetype");
+}
+
+body {
+  font-family: "Slabo";
+  height: 95vh;
+  max-height: 95vh;
+  padding: 0px;
+}
+
+.container {
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+}
+
+.row {
+  padding: 10px;
+  height: auto;
+}
+
+.fill {
+  height: 60%;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.point {
+  color: #ED8CA4;
+}
+
+input {
+  max-width: 500px;
+  width: 100%;
+  font-size: 15pt;
+}
+
+textarea {
+  max-width: 900px;
+  width: 100%;
+  height: 100%;
+  font-family: "Source";
+  resize: none;
+}
+
+#laikas {
+  width: 50px;
+}
+
+#terminalas {
+  word-break: break-all;
+}
+
+#file_btn {
+  display: block;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+
+#source_btn {
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 10;
+  color: #000;
+}
+
+#source_btn.white {
+  color: #fff;
+}
+
+#source_btn:hover, #source_btn:active, #source_btn:focus  {
+  color: #dedede;
+}
+
+#cont_machine {
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
+#cont_source {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  padding: 0px;
+  background: #282C34;
+  top: 0;
+  left: 0;
+}
+
+#cont_source #source_highl {
+  display: inline-block;
+  word-break: break-all;
+  white-space: pre-wrap;
+  margin: 0px;
+  background: none;
+  padding: 20px;
+  font-family: "Source";
+  font-size: 12pt;
+  width: 100%;
+  max-width: 100%;
+}

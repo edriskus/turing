@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+      <title>Tiuringo mašina</title>
+
+      <!-- Bootstrap - Naudojama vizualiniam elementų stiliui patobulinti -->
+      <link rel="stylesheet" href="src/bootstrap.min.css">
+
+      <!-- jQuery - Naudojama paprastesniam puslapio elementų valdymui -->
+      <script src="src/jquery-3.1.0.min.js"></script>
+
+      <!-- Simple Ajax Uploader - Naudojama asinchroniniam failo įkėlimui į serverį -->
+      <script src="src/dmuploader.min.js"></script>
+
+      <!-- Highlight.js - Skirta vizualiai formatuoti išeities kodo rodymo sritį -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/atom-one-dark.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+      <!-- Elementų vizualinio stiliaus aprašymas -->
+      <link rel="stylesheet" href="src/app.css">
+
+    </head>
+    <body>
+      <p id="source_btn" onclick="showSource()"><span class="glyphicon glyphicon-console" aria-hidden="true"></span></p>
+      <div class="container" id="cont_source">
+        <p id="source_highl" class="javascript"></p>
+      </div>
+      <div class="container" id="cont_machine">
+        <div class="row text-center">
+          <h1>Tiuringo mašina</h1>
+          <h3>Edmundas Riškus. PRIf-15/2</h3>
+          <code>Bibliotekos:<br>jQuery 3.1.0, Bootstrap 3.3.7, LPology/Simple-Ajax-Uploader 2.5.5, highlight.js 9.6.0</code>
+        </div>
+
+        <!-- Rezultato atvaizdavimas, paleidimo mygtukai -->
+        <div class="row text-center">
+          <h2><code id="terminalas">00000000x0</code></h2>
+          <h4><code id="statusas" class="text-info">Išjungta</code></h2>
+          <button id="play_btn" class="btn btn-success" onclick="btnStart()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+          <button class="btn btn-danger" onclick="btnReset()"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span></button>
+        </div>
+
+        <!-- Vykdymo laiko nustatymas -->
+        <div class="row text-center">
+          Kiek laiko laukti tarp žingsnių (ms)?
+          <input id="laikas" class="text-center" value="50" placeholder="50"></input>
+        </div>
+
+        <!-- Programos kodo įvestis -->
+        <div class="row fill text-center">
+          <textarea id="kodas" class="text-left"></textarea>
+          <label id="file_btn" class="btn btn-info"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Pasirinkti failą</label>
+        </div>
+
+    </body>
+
+    <!-- Pagrindinis JavaScript failas, jungiantis mašiną su naudotojo sąsaja -->
+    <script src="src/UI.js"></script>
+  </html>
